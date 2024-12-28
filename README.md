@@ -14,6 +14,7 @@ Here's a list of features included in this project:
 
 | Name                                               | Description                                                 |
 | ----------------------------------------------------|------------------------------------------------------------- |
+| [Koin](https://start.ktor.io/p/koin)               | Provides dependency injection                               |
 | [Routing](https://start.ktor.io/p/routing-default) | Allows to define structured routes and associated handlers. |
 
 ## Building & Running
