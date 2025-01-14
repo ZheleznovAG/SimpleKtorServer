@@ -5,5 +5,5 @@ interface HelloService {
 }
 
 class HelloServiceImpl : HelloService {
-    override fun sayHello() = "Hello from HelloService!"
+    override fun sayHello() = "Hello World!"
 }

@@ -5,11 +5,22 @@ import org.koin.dsl.module
 import org.koin.ktor.plugin.Koin
 import org.koin.logger.slf4jLogger
 
-fun Application.configureFrameworks() {
+fun Application.configureFrameworks(modules: List<org.koin.core.module.Module>) {
     install(Koin) {
         slf4jLogger()
-        modules(module {
-            single<HelloService> { HelloServiceImpl() }
-        })
+        modules(
+            listOf(
+                appModule,
+                authModule,
+            )
+        )
     }
+}
+
+val appModule = module {
+    single { HelloServiceImpl() }
+}
+
+val authModule = module {
+    single { AuthService() }
 }

@@ -18,6 +18,10 @@ repositories {
     mavenCentral()
 }
 
+tasks.test {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(libs.koin.ktor)
     implementation(libs.koin.logger.slf4j)
@@ -25,6 +29,9 @@ dependencies {
     implementation(libs.ktor.server.netty)
     implementation(libs.logback.classic)
     implementation(libs.ktor.server.config.yaml)
+    implementation("io.ktor:ktor-client-core:3.0.2")
+    implementation("io.ktor:ktor-client-cio:3.0.2")
+    implementation("io.ktor:ktor-server-auth:3.0.2")
     testImplementation(libs.ktor.server.test)
     testImplementation(libs.kotlin.test.junit)
 }

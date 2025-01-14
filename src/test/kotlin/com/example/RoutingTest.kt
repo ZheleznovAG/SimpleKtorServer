@@ -12,8 +12,7 @@ class RoutingTest {
     @Test
     fun testHelloEndpoint() = testApplication {
         application {
-            configureFrameworks()
-            configureRouting()
+            module()
         }
 
         client.get("/hello").apply {
